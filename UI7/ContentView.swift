@@ -16,7 +16,10 @@ struct ContentView: View {
             List{
              
                 ForEach(0..<30){_ in
-
+                    
+               
+                    NavigationLink(destination: home()){
+                       
                     HStack{
                     Image("image").resizable().frame(width: 40, height: 40)
                         .cornerRadius(30)
@@ -25,7 +28,7 @@ struct ContentView: View {
                         
                     }
                 }
-                
+                }
                 
             }.navigationBarTitle("UI8")
             
@@ -36,5 +39,15 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct home : View {
+    var body: some View{
+        
+        
+        Image("image").resizable().aspectRatio(contentMode: .fill)
+            .navigationBarTitle("Home",displayMode: .inline)
+        
     }
 }
